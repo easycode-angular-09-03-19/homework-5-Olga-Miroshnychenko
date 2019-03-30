@@ -1,0 +1,9 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">User id: {{ item.id }}</h5>
+    <p class="card-text">Title: {{ item.title }}</p>
+    <button class="btn btn-primary" (click)="onEditItem()" *ngIf="!isEdited">Edit</button>
+    <button class="btn btn-info ml-3" *ngIf="isEdited" (click)="onCancelItem()">Cancel</button>
+    <button class="btn btn-warning ml-3" (click)="onDeleteItem()">Delete</button>
+  </div>
+</div>
